@@ -44,5 +44,6 @@ export default {};
   display: flex;
   align-items: center;
   gap: 50px;
+  
 }
 </style>
