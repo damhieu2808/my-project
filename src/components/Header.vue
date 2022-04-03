@@ -134,38 +134,38 @@
             </linearGradient>
           </defs>
         </svg>
-        <p class="text-white mb-0">MIOTO</p>
+        <p class="text-white mb-0 text-margin">MIOTO</p>
       </div>
       <div class="option text-white">
         <div class="contact">
           <div class="phone">
             <i class="fa-solid fa-phone"></i>
-            <span>1900 9217</span>
+            <span class="text-margin">1900 9217</span>
           </div>
           <div class="email">
             <i class="fa-solid fa-envelope"></i>
-            <span>contact@mioto.vn</span>
+            <span class="text-margin" >contact@mioto.vn</span>
           </div>
           <div>
             <i class="fa-brands fa-facebook-messenger"></i>
-            <span>Facebook</span>
+            <span class="text-margin">Facebook</span>
           </div>
         </div>
 
         <div class="info">
           <i class="fa-solid fa-circle-info"></i>
-          <span> Hướng dẫn </span>
+          <span class="text-margin huongdan">Hướng dẫn</span>
         </div>
         <div class="auth">
-          <p class="mb-0">Đăng nhập</p>
-          <p class="mb-0 sign-in">Đăng ký</p>
+          <p class="mb-0 log-in text-margin">Đăng nhập</p>
+          <p class="mb-0 sign-in btn btn-transparent btn--m">Đăng Kí</p>
         </div>
       </div>
       <svg
         width="130"
         height="63"
         viewBox="0 0 130 63"
-        fill="none"
+        fill="none" 
         xmlns="http://www.w3.org/2000/svg"
       >
         <g clip-path="url(#clip0_8479_912)">
@@ -392,7 +392,8 @@ export default {};
   .contact {
     display: flex;
     gap: 50px;
-    padding-right: 100px;
+    padding-right: 200px;
+  
   }
   .info {
     padding-right: 50px;
@@ -404,5 +405,22 @@ export default {};
       border: 1px solid white;
     }
   }
+}
+.text-margin {
+  font-size: 15px;
+  margin:5px;
+}
+.text-margin:hover {
+  color: green;
+  cursor: pointer;
+}
+.sign-in {
+  color: white;
+}
+.sign-in:hover{
+  color: green;
+}
+.info:hover{
+  color: green;
 }
 </style>
