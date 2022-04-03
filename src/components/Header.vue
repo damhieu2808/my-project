@@ -1,5 +1,4 @@
 <template>
-  <b-container>
     <div class="header">
       <div class="logo">
         <svg
@@ -369,7 +368,6 @@
         </defs>
       </svg>
     </div>
-  </b-container>
 </template>
 
 <script>
