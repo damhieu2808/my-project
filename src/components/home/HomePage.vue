@@ -111,16 +111,21 @@
     <div>
       <Vender></Vender>
     </div>
+    <div>
+      <ListCar></ListCar>
+    </div>
   </div>
 </template>
 
 <script>
 import { Carousel3d, Slide } from "vue-carousel-3d";
+import ListCar from "./ListCar.vue";
 import Vender from "./Vender.vue";
 export default {
   components: {
     Carousel3d,
     Slide,
+    ListCar,
     Vender,
   },
   data() {
