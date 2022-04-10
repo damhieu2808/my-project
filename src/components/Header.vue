@@ -2,9 +2,12 @@
   <div class="header">
     <img src="../assets/svg/left-header.svg" />
     <div class="logo">
-      <p class="text-white mb-0 text-header" style="font-size: 30px">
+      <p class="text-white mb-0 text-header container text-logo" style="font-size: 30px">
         HaNoi CAR
       </p>
+      <div></div>
+      <div></div>
+      <div></div>
     </div>
     <div class="option text-white">
       <div class="contact">
@@ -32,7 +35,7 @@
         <Register></Register>
       </div>
       <img src="../assets/svg/right-header.svg" />
-    </div>
+      </div>
   </div>
 </template>
 
@@ -102,4 +105,5 @@ export default {
     display: none !important;
   }
 }
+
 </style>
