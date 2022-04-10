@@ -10,6 +10,10 @@ Vue.use(BootstrapVue);
 // Optionally install the BootstrapVue icon components plugin
 Vue.use(IconsPlugin);
 
+import Carousel3d from "vue-carousel-3d";
+
+Vue.use(Carousel3d);
+
 new Vue({
   render: (h) => h(App),
 }).$mount("#app");
