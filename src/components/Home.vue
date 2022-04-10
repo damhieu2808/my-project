@@ -39,10 +39,13 @@
                 </div>
               </b-tab>
               <b-tab title="Xe lái tự dộng">
-                
-                  <img src="../assets/xe_tu_lai.png" />
+                <template #title>
+                  <img back class="photo-tab2" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Man_Driving_Car_Cartoon_Vector.svg/2560px-Man_Driving_Car_Cartoon_Vector.svg.png" />
                   <p class="text-tab">Xe lai tu dong</p>
-                
+                </template>
+                <div class="search search-tab2">
+
+                </div>
               </b-tab>
             </b-tabs>
           </b-card>
@@ -78,5 +81,9 @@ export default {};
 .fa-location-dot{
   margin: 5px;
   color: green;
+}
+.photo-tab2 {
+  width: 200px;
+  height: 200px;
 }
 </style>
