@@ -5,11 +5,15 @@
       @click="$bvModal.show('modal-login')"
       style="color:white"
     >
-      Đăng nhap
+      Đăng Nhập
     </p>
-    <b-modal id="modal-login" hide-footer hide-header size="lg">
-      <div class="d-block text-center">
-        <div>
+    <b-modal id="modal-login" class="modal" hide-footer hide-header size="lg">
+      <div class="login-form__header">
+        <h3 class="login-form__heading">Đăng nhập</h3>
+        
+
+
+        <!--<div>
           <b-form @submit="onSubmit" v-if="show">
             <p class="title slogan-title">Chào mừng bạn đến với HaNoi CAR</p>
             <b-row>
@@ -58,8 +62,45 @@
               </b-button>
             </div>
           </b-form>
-        </div>
+        </div>-->
       </div>
+      <div class="login-form__form">
+        <div class="login-form__group has-ico-email">
+          <i class="fa-solid fa-envelope"></i>
+          <input type="text" class="login-form__input" placeholder="Số điện thoại hoặc Email">
+        </div>
+       
+        <div class="login-form__group has-ico-password">
+          <i class="fa-solid fa-lock"></i>
+          <input type="Password" class="login-form__input" placeholder="Mật khẩu">
+        </div>
+       
+      </div>
+      <div class="login-form__aside">
+         
+           <p class="login-form__policy-text">
+          Bạn chưa là thành viên?
+          <a href="" class="login-form__policy-link">Hãy đăng ký ngay!</a>
+        </p>
+         
+      </div>
+      <div class="login-form__controls">
+        
+        <button class="btn btn--primary">Đăng Nhập</button>
+      </div>
+      <p class="login-form-text__socials">Hoặc đăng nhập bằng tài khoản</p>
+      <div class="login-form__socials">
+        
+          <a href="https://www.facebook.com/hieu.damxuan.7" class="btn btn--with-icon-fb">
+            <i class="fa-brands fa-facebook-square"></i>
+             Facebook
+          </a>
+          <a href="https://www.facebook.com/hieu.damxuan.7" class="btn btn--with-icon-gg">
+            <i class="fa-brands fa-google"></i>
+             Google
+          </a>
+        </div>
+
     </b-modal>
   </div>
 </template>
@@ -89,6 +130,13 @@ export default {
   padding: 0%;
   margin: 0%;
 }
+:root {
+  --primary-color:#ee4d2d;
+  --white-color:#fff;
+  --black-color:#000;
+  --text-color: #333;
+  --border-color: #dbdbdb;
+}
 #email{
   margin: px;
   text-align: center
@@ -107,5 +155,93 @@ export default {
     color: green;
     border: 1px solid green;
   }
+}
+.tab-box{
+  padding: 10px;
+  border-width: 5px;
+  border-color: gray;
+}
+
+.login-form__heading{
+ 
+  display: flex;
+  justify-content: center;
+  font: inherit;
+  font-weight: 800;
+  line-height: 1.5;
+  font-size: 2rem;
+}
+.btn.btn--primary {
+  
+  min-width: 142px;
+  height: 32px;
+  background-color: #00a550;
+  margin-left: 3px;
+}
+.login-form__form{
+  padding:  0px 48px
+}
+.login-form__input{
+  width: 100%;
+  height: 50px;
+  margin-top: 16px;
+  border: 1px solid var(--border-color);
+  border-radius: 2px;
+  outline: none;
+  padding-left: 25px;
+  }
+.login-form__input:focus{
+  border-color: #888;
+}
+.login-form__aside{
+  margin-top: 20px;
+  padding: 0px 10px
+}
+.btn.btn--with-icon-fb{
+  
+  margin-right: 2px;
+  background-color: #4267b2;
+  font-size: 14px;
+  color: #fff;
+  border-radius: 3px;
+}
+.btn.btn--with-icon-gg{
+  margin-left: 2px;
+  background-color: #cf3f30;
+  font-size: 14px;
+  color: #fff;
+  border-radius: 3px;
+  box-shadow: none
+}
+.login-form__controls{
+  margin-top: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%
+
+}
+.login-form-text__socials{
+  display: flex;
+  justify-content: center;
+  margin: 20px 0px;
+}
+.login-form__socials{
+  
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.login-form__form .login-form__group.has-ico-email i{
+    position: absolute;
+    top: 104px;
+    padding-left: 5px;
+    z-index: 1;
+}
+.login-form__form .login-form__group.has-ico-password i{
+    position: absolute;
+    top: 168px;
+    padding-left: 5px;
+    z-index: 1;
 }
 </style>

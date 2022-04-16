@@ -1,24 +1,24 @@
 <template>
   <div class="header">
+    <div>
     <img src="../assets/svg/left-header.svg" />
+    </div>
     <div class="logo">
-      <p class="text-white mb-0 text-header container text-logo" style="font-size: 30px">
+      <p class="text-white mb-0 text-logo container">
         HaNoi CAR
       </p>
-      <div></div>
-      <div></div>
-      <div></div>
+     
     </div>
     <div class="option text-white">
       <div class="contact">
         <div class="phone">
           <i class="fa-solid fa-phone"></i>
-          <span class="text-header">1900 9217</span>
+          <span class="text-header">0397345500</span>
         </div>
         <div class="email">
           <i class="fa-solid fa-envelope"></i>
           <i class="fas fa-calendar-star"></i>
-          <span class="text-header">contact@mioto.vn</span>
+          <span class="text-header">xuanhoaluh15@gmail.com</span>
         </div>
         <div>
           <i class="fa-brands fa-facebook-messenger"></i>
@@ -28,13 +28,15 @@
 
       <div class="info">
         <i class="fa-solid fa-circle-info"></i>
-        <span class="text-margin huongdan">Hướng dẫn</span>
+        <span class="text-hd huongdan">Hướng dẫn</span>
       </div>
       <div class="auth">
         <Login></Login>
         <Register></Register>
       </div>
+      <div class="img-logo-right">
       <img src="../assets/svg/right-header.svg" />
+      </div>
       </div>
   </div>
 </template>
@@ -59,8 +61,7 @@ export default {
   align-items: center;
   justify-content: space-between;
   .logo {
-    display: flex;
-    align-items: center;
+   font-size: 15px
   }
 }
 .option {
@@ -79,13 +80,20 @@ export default {
   }
   .auth {
     display: flex;
+    flex-direction: row;
     gap: 50px;
     align-items: center;
   }
 }
-.text-margin {
+.text-hd {
   font-size: 15px;
   margin: 5px;
+}
+.text-logo {
+  font-size: 20px;
+  font-family:inherit; 
+  font-weight: 900;
+  width: 70%
 }
 .text-header {
   font-size: 15px;

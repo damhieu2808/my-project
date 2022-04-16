@@ -1,12 +1,15 @@
 <template>
   <div class="body">
     <div class="search-box">
-      <p class="slogan">Hanoi Car - Cùng bạn trên mọi hành trình</p>
+      <br>
+      <br>
+      <br>
+      <p class="slogan">HaNoi CAR - CÙNG BẠN TRÊN MỌI NẺO ĐƯỜNG</p>
     </div>
     <div class="container">
-      <b-card no-body>
-        <b-tabs card>
-          <b-tab title="Xe tự Lái" active>
+      <b-card no-body class="tab-box container">
+        <b-tabs card class="tabs col-4">
+          <b-tab title="Xe tự Lái" class="xetulai" active>
             <div>
               <b-form @submit="onSubmit" v-if="show">
                 <b-form-group>
@@ -43,7 +46,7 @@
               </b-form>
             </div>
           </b-tab>
-          <b-tab title="Xe có tài xế">
+          <b-tab title="Xe có tài xế" class="xecotaixe">
             <b-card-text>Tab contents 2</b-card-text>
           </b-tab>
         </b-tabs>
@@ -235,5 +238,41 @@ export default {
     margin-top: 15px;
     text-align: right;
   }
+}
+.tab-box{
+  display: block;
+  width: 60%;
+  padding: 10px;
+  border-width: 15px;
+  border-style: solid;
+  border-color: gray;
+  align-items: center
+}
+.xetulai{
+  color:rgb(36, 82, 82);
+  background-color: rgb(218, 231, 227)
+}
+.tabs{
+  color: aquamarine;
+  margin: 2px;
+  display: block;
+  width: 100%
+
+}
+.slogan{
+ font: inherit;
+    font-style: inherit;
+    font-variant-ligatures: inherit;
+    font-variant-caps: inherit;
+    font-variant-numeric: inherit;
+    font-variant-east-asian: inherit;
+    font-weight: inherit;
+    font-stretch: inherit;
+    
+    line-height: inherit;
+    font-family: inherit;
+  font-weight: 700;
+  font-size: 2.25rem;
+  color: rgb(56, 29, 29)
 }
 </style>
