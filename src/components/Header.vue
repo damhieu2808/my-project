@@ -4,9 +4,12 @@
     <img src="../assets/svg/left-header.svg" />
     </div>
     <div class="logo">
-      <p class="text-white mb-0 text-logo container">
-        HaNoi CAR
-      </p>
+      <router-link
+          tag="a"
+          to="/"
+          >
+            HaNoiCar
+      </router-link>
      
     </div>
     <div class="option text-white">
@@ -28,7 +31,14 @@
 
       <div class="info">
         <i class="fa-solid fa-circle-info"></i>
-        <span class="text-hd huongdan">Hướng dẫn</span>
+        <div class="tutorials_link">
+          <router-link
+          tag="a"
+          to="/Tutorials"
+          >
+            Hướng Dẫn
+          </router-link>
+        </div>
       </div>
       <div class="auth">
         <Login></Login>
@@ -45,10 +55,13 @@
 import Register from "./Register";
 import Login from "./Login.vue";
 
+
+
 export default {
   components: {
     Register,
     Login,
+    
   },
 };
 </script>
@@ -73,6 +86,9 @@ export default {
     padding-right: 200px;
   }
   .info {
+    display: flex;
+    flex-direction: row;
+    
     padding-right: 50px;
     &:hover {
       color: green;

@@ -2,7 +2,7 @@
     <div class="Footer_main">
         <b-container class="footer__items">
             <b-row cols="5" class="footer__columns">
-                <b-col class="footer__items-columns">HaNoi Car
+                <b-col class="footer__items-columns"><p style="font-size:35px;">HaNoi Car</p>
                     <div class="footer__items-column">
                         <i class="fa-brands fa-facebook" style="margin-right: 10px"></i>
                         <i class="fa-brands fa-instagram" style="margin-right: 10px"></i>
@@ -73,7 +73,9 @@
 
 
 
-        <hr  width="30%" size="10px" align="center" color="red" class="cut_line" />
+     <div class="hr">
+         <hr style="height:3px;border-width:0;background-color:#cecbcb">
+     </div>
 
 
 
@@ -88,18 +90,20 @@
                 </b-col>
 
                 <b-col cols="12" md="8">
-                    <div class="address">
-                        <p class="address_text">Địa chỉ: KĐT Văn Quán, Hà Đông, Hà Nội.</p>
-                    </div>
-                    <div class="info ">
-                        <p class="info_text">Mã số thuế: 8578485786</p>
-                        <p class="info_text">Email: xuanhoaluh15@gmail.com</p>
-                        <p class="info_text">Số điện thoại: 0397345500</p>
-                    </div>
-                     <div class="bank ">
-                        <p class="bank_text">Tên TK: LUU XUAN HOA</p>
-                        <p class="bank_text">Số TK: 12210001720600</p>
-                        <p class="bank_text">Ngân hàng BIDV-CN Hà Thành</p>
+                    <div class="info_renter">
+                        <div class="address">
+                            <p class="address_text">Địa chỉ: KĐT Văn Quán, Hà Đông, Hà Nội.</p>
+                        </div>
+                        <div class="info ">
+                            <p class="info_text">Mã số thuế: 8578485786</p>
+                            <p class="info_text">Email: xuanhoaluh15@gmail.com</p>
+                            <p class="info_text">Số điện thoại: 0397345500</p>
+                        </div>
+                        <div class="bank ">
+                            <p class="bank_text">Tên TK: LUU XUAN HOA</p>
+                            <p class="bank_text">Số TK: 12210001720600</p>
+                            <p class="bank_text">Ngân hàng BIDV-CN Hà Thành</p>
+                        </div>
                     </div>
                 </b-col>
             </b-row>
@@ -124,7 +128,7 @@ export default {
  }
  
 .footer__items-columns{
-    margin-top: 10px;
+    margin-top: 90px;
     margin-bottom: 10px;
     padding-top: 10px;
     display: block;
@@ -137,6 +141,7 @@ export default {
     
 }
 .footer__items-column{
+    padding-left: 10px;
     margin-top: 40px;
     cursor: pointer;
 }
@@ -154,7 +159,22 @@ export default {
 .footer__item-column:hover{
     color: rgb(82, 214, 82)
 }
-
+.hr{
+    hr{
+        
+        display: block;
+        width: 90%;
+        margin-top: 1.5em;
+        margin-bottom: 0.5em;
+        margin-left: auto;
+        margin-right: auto;
+         border-style: inset;
+        border-width: 1px;
+        color: #cecbcb;
+        z-index: 3;
+        
+}
+}
 .payments_tilte{
     font-size: 1.125rem;
     font-family: inherit;
@@ -201,9 +221,8 @@ export default {
     font-size: 1.125rem;
    
 }
-.cut-line{
-    z-index: 1;
-    position: relative;
+.info_renter{
+    margin-left: 88px;
 }
 .address{
     margin: 10px 0px;
