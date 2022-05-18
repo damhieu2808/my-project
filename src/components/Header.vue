@@ -1,16 +1,22 @@
 <template>
   <div class="header">
     <div>
-    <img src="../assets/svg/left-header.svg" />
+      <img src="../assets/svg/left-header.svg" />
     </div>
     <div class="logo">
       <router-link
-          tag="a"
-          to="/"
-          >
-            HaNoiCar
+        tag="a"
+        to="/"
+        style="
+          text-decoration: none;
+          font-size: 20px;
+          color: white;
+          font-family: inherit;
+          font-weight: 900;
+        "
+      >
+        HaNoi Car
       </router-link>
-     
     </div>
     <div class="option text-white">
       <div class="contact">
@@ -32,10 +38,7 @@
       <div class="info">
         <i class="fa-solid fa-circle-info"></i>
         <div class="tutorials_link">
-          <router-link
-          tag="a"
-          to="/Tutorials"
-          >
+          <router-link tag="a" to="/Tutorials" class="text-header">
             Hướng Dẫn
           </router-link>
         </div>
@@ -45,9 +48,9 @@
         <Register></Register>
       </div>
       <div class="img-logo-right">
-      <img src="../assets/svg/right-header.svg" />
+        <img src="../assets/svg/right-header.svg" />
       </div>
-      </div>
+    </div>
   </div>
 </template>
 
@@ -55,13 +58,10 @@
 import Register from "./Register";
 import Login from "./Login.vue";
 
-
-
 export default {
   components: {
     Register,
     Login,
-    
   },
 };
 </script>
@@ -73,9 +73,6 @@ export default {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  .logo {
-   font-size: 15px
-  }
 }
 .option {
   display: flex;
@@ -85,10 +82,11 @@ export default {
     gap: 50px;
     padding-right: 200px;
   }
+
   .info {
     display: flex;
     flex-direction: row;
-    
+
     padding-right: 50px;
     &:hover {
       color: green;
@@ -105,16 +103,16 @@ export default {
   font-size: 15px;
   margin: 5px;
 }
-.text-logo {
-  font-size: 20px;
-  font-family:inherit; 
-  font-weight: 900;
-  width: 70%
-}
+
 .text-header {
+  text-decoration: none;
+  color: white;
   font-size: 15px;
   margin: 5px;
   font-family: Arial, Helvetica, sans-serif;
+  &:hover {
+    color: green;
+  }
 }
 .text-margin:hover {
   color: green;
@@ -129,5 +127,4 @@ export default {
     display: none !important;
   }
 }
-
 </style>

@@ -1,92 +1,128 @@
 <template>
   <div class="body">
-    <div class="search-box">
-      <br>
-      <br>
-      <br>
-      <p class="slogan">HaNoi CAR - CÙNG BẠN TRÊN MỌI NẺO ĐƯỜNG</p>
-    </div>
-    <div class="container">
-      <b-card no-body class="tab-box container">
-        <b-tabs card class="tabs col-4">
-          <b-tab title="Xe tự Lái" class="xetulai" active>
-            <div>
-              <b-form @submit="onSubmit" v-if="show">
-                <b-form-group>
-                  <label for="place"> Địa điểm</label>
-                  <b-form-input
-                    id="place1"
-                    v-model="form.place"
-                    type="text"
-                    placeholder="Nhập thành phố, quận, địa chỉ..."
-                    required
-                  ></b-form-input>
-                </b-form-group>
+    <div class="imgbackground">
+      <div class="search-box mb-5">
+        <br />
+        <br />
+        <br />
+        <p class="slogan">HaNoi CAR - CÙNG BẠN TRÊN MỌI NẺO ĐƯỜNG</p>
+      </div>
+      <div class="search_car container">
+        <b-card no-body class="tab-box container">
+          <b-tabs card class="tabs col-4">
+            <b-tab title="Xe tự Lái" class="xetulai" active>
+              <div>
+                <b-form @submit="onSubmit" v-if="show">
+                  <b-form-group>
+                    <label for="place"> Địa điểm</label>
+                    <b-form-input
+                      id="place1"
+                      v-model="form.place"
+                      type="text"
+                      placeholder="Nhập thành phố, quận, địa chỉ..."
+                      required
+                    ></b-form-input>
+                  </b-form-group>
 
-                <b-form-group>
-                  <label for="date-start">Bắt đầu</label>
-                  <b-form-datepicker
-                    id="date-start"
-                    v-model="form.date_start"
-                    class="mb-2"
-                  ></b-form-datepicker>
-                </b-form-group>
-                <b-form-group>
-                  <label for="date-end">Kết thúc</label>
-                  <b-form-datepicker
-                    id="date-end"
-                    v-model="form.date_end"
-                    class="mb-2"
-                  ></b-form-datepicker>
-                </b-form-group>
+                  <b-form-group>
+                    <label for="date-start">Bắt đầu</label>
+                    <b-form-datepicker
+                      id="date-start"
+                      v-model="form.date_start"
+                      class="mb-2"
+                    ></b-form-datepicker>
+                  </b-form-group>
+                  <b-form-group>
+                    <label for="date-end">Kết thúc</label>
+                    <b-form-datepicker
+                      id="date-end"
+                      v-model="form.date_end"
+                      class="mb-2"
+                    ></b-form-datepicker>
+                  </b-form-group>
 
-                <b-button type="submit" variant="primary">
-                  <i class="fa-solid fa-magnifying-glass"></i> Tìm xe ngay
-                </b-button>
-              </b-form>
-            </div>
-          </b-tab>
-          <b-tab title="Xe có tài xế" class="xecotaixe">
-            <b-card-text>Tab contents 2</b-card-text>
-          </b-tab>
-        </b-tabs>
-      </b-card>
+                  <b-button type="submit" variant="primary">
+                    <i class="fa-solid fa-magnifying-glass"></i> Tìm xe ngay
+                  </b-button>
+                </b-form>
+              </div>
+            </b-tab>
+            <b-tab title="Xe có tài xế" class="xecotaixe">
+              <div>
+                <b-form @submit="onSubmit" v-if="show">
+                  <b-form-group>
+                    <label for="place"> Địa điểm</label>
+                    <b-form-input
+                      id="place1"
+                      v-model="form.place"
+                      type="text"
+                      placeholder="Nhập thành phố, quận, địa chỉ..."
+                      required
+                    ></b-form-input>
+                  </b-form-group>
 
-      <div class="introduce mt-5">
-        <h3 class="title">TÍNH NĂNG NỔI BẬT</h3>
-        <div class="introduce-body">
-          <carousel-3d
-            :autoplay="true"
-            :autoplay-timeout="3000"
-            :controls-visible="true"
-            :controls-prev-html="'&#x2039; '"
-            :controls-next-html="'&#x203A;'"
-            :controls-width="10"
-            :controls-height="30"
-            :clickable="false"
-          >
-            <slide :index="0">
-              <img src="../../assets/thu-tuc/step-1.jpg" />
-            </slide>
-            <slide :index="1">
-              <img src="../../assets/thu-tuc/step-2.jpg" />
-            </slide>
-            <slide :index="2">
-              <img src="../../assets/thu-tuc/step-3.jpg" />
-            </slide>
-            <slide :index="3">
-              <img src="../../assets/thu-tuc/step-4.jpg" />
-            </slide>
-            <slide :index="4">
-              <img src="../../assets/thu-tuc/step-5.jpg" />
-            </slide>
-            <slide :index="5">
-              <img src="../../assets/thu-tuc/step-6.jpg" />
-            </slide>
-          </carousel-3d>
-        </div>
+                  <b-form-group>
+                    <label for="date-start">Bắt đầu</label>
+                    <b-form-datepicker
+                      id="date-start"
+                      v-model="form.date_start"
+                      class="mb-2"
+                    ></b-form-datepicker>
+                  </b-form-group>
+                  <b-form-group>
+                    <label for="date-end">Kết thúc</label>
+                    <b-form-datepicker
+                      id="date-end"
+                      v-model="form.date_end"
+                      class="mb-2"
+                    ></b-form-datepicker>
+                  </b-form-group>
+
+                  <b-button type="submit" variant="primary">
+                    <i class="fa-solid fa-magnifying-glass"></i> Tìm xe ngay
+                  </b-button>
+                </b-form>
+              </div>
+            </b-tab>
+          </b-tabs>
+        </b-card>
       </div>
     </div>
+    <div class="introduce mt-5">
+      <h3 class="title">TÍNH NĂNG NỔI BẬT</h3>
+      <div class="introduce-body">
+        <carousel-3d
+          :autoplay="true"
+          :autoplay-timeout="3000"
+          :controls-visible="true"
+          :controls-prev-html="'&#x2039; '"
+          :controls-next-html="'&#x203A;'"
+          :controls-width="10"
+          :controls-height="30"
+          :clickable="false"
+        >
+          <slide :index="0">
+            <img src="../../assets/thu-tuc/step-1.jpg" />
+          </slide>
+          <slide :index="1">
+            <img src="../../assets/thu-tuc/step-2.jpg" />
+          </slide>
+          <slide :index="2">
+            <img src="../../assets/thu-tuc/step-3.jpg" />
+          </slide>
+          <slide :index="3">
+            <img src="../../assets/thu-tuc/step-4.jpg" />
+          </slide>
+          <slide :index="4">
+            <img src="../../assets/thu-tuc/step-5.jpg" />
+          </slide>
+          <slide :index="5">
+            <img src="../../assets/thu-tuc/step-6.jpg" />
+          </slide>
+        </carousel-3d>
+      </div>
+    </div>
+
     <div class="tutorial mt-5">
       <div class="container pt-5 pb-2">
         <h3 class="title">Hướng dẫn thuê xe</h3>
@@ -108,7 +144,16 @@
             <p>Kết thúc giao dịch</p>
           </div>
         </div>
-        <p class="xem-them">Xem thêm ></p>
+        <div class="tutorials_link">
+          <router-link
+            tag="a"
+            to="/Tutorials"
+            class="text-header"
+            style="text-decoration: none; color: black; font-weight: 700"
+          >
+            <p class="xem-them">Xem thêm ></p>
+          </router-link>
+        </div>
       </div>
     </div>
     <div>
@@ -151,9 +196,17 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.imgbackground{
+  height: 100%;
+  background-image: url("../../assets/hotay.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  margin-bottom: 20px;
+}
 .search-box {
   padding-top: 20px;
 }
+
 .slogan {
   text-align: center;
   font-size: 2.5rem;
@@ -163,16 +216,16 @@ export default {
   margin-bottom: 1.5rem;
 }
 .body {
-  background-image: url("../../assets/bg-main.ee3aedfb.jpg");
+  background-image: url("../../assets/whitebackground.jpg");
+
   background-size: cover;
   background-repeat: no-repeat;
-  min-height: 700px;
 }
 .introduce {
   .title {
     color: #534c4c;
     text-transform: uppercase;
-    font-size: 1.5 rem;
+    font-size: 1.5rem;
     margin-bottom: 1rem;
     font-weight: 700;
   }
@@ -239,40 +292,39 @@ export default {
     text-align: right;
   }
 }
-.tab-box{
+.tab-box {
   display: block;
   width: 60%;
   padding: 10px;
   border-width: 15px;
   border-style: solid;
   border-color: gray;
-  align-items: center
+  align-items: center;
 }
-.xetulai{
-  color:rgb(36, 82, 82);
-  background-color: rgb(218, 231, 227)
+.xetulai {
+  color: rgb(36, 82, 82);
+  background-color: rgb(218, 231, 227);
 }
-.tabs{
+.tabs {
   color: aquamarine;
   margin: 2px;
   display: block;
-  width: 100%
-
+  width: 100%;
 }
-.slogan{
- font: inherit;
-    font-style: inherit;
-    font-variant-ligatures: inherit;
-    font-variant-caps: inherit;
-    font-variant-numeric: inherit;
-    font-variant-east-asian: inherit;
-    font-weight: inherit;
-    font-stretch: inherit;
-    
-    line-height: inherit;
-    font-family: inherit;
+.slogan {
+  font: inherit;
+  font-style: inherit;
+  font-variant-ligatures: inherit;
+  font-variant-caps: inherit;
+  font-variant-numeric: inherit;
+  font-variant-east-asian: inherit;
+  font-weight: inherit;
+  font-stretch: inherit;
+
+  line-height: inherit;
+  font-family: inherit;
   font-weight: 700;
   font-size: 2.25rem;
-  color: rgb(56, 29, 29)
+  color: rgb(56, 29, 29);
 }
 </style>

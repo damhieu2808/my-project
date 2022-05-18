@@ -1,5 +1,5 @@
 <template>
-  <div class="container list-car">
+  <div class="container list-car ">
     <h1 class="my-5">Xe Nổi Bật</h1>
     <div>
       <b-card no-body class="car-card">
@@ -25,7 +25,11 @@ export default {};
 </script>
 
 <style lang="scss" scoped>
+
 .list-car {
+  width: 100%;
+  background-image: url("../../assets/whitebackground.jpg");
+  background-repeat: no-repeat;
   .car-card {
     max-width: 400px;
     display: flex;

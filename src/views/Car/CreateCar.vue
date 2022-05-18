@@ -1,5 +1,5 @@
 <template>
-  <b-container>
+  <b-container class="page__body">
     <b-col>
       <h1>Đăng ký xe</h1>
       <b-form>
@@ -37,6 +37,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.page__body{
+  margin: 100px 0px 100px;
+}
 .car-form {
   display: flex;
   gap: 20px;
