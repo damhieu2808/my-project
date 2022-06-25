@@ -1,10 +1,13 @@
+import Vue from "vue";
+import Router from "vue-router";
 //define routes to components//
-
 import HomePage from "./components/home/HomePage.vue";
 import Tutorials from "./components/Huongdan/Tutorials.vue";
 import CreateCar from "@/views/Car/CreateCar";
 import Detail from "@/views/Car/Detail";
 import CarRegister from "./components/CarRegister/CarRegister.vue"
+
+Vue.use(Router);
 
 export const routes = [
   { path: "/", name: "Home", component: HomePage },
@@ -13,3 +16,4 @@ export const routes = [
   { path: "/car/detail", name: "car-detail", component: Detail },
   { path: "/CarRegister", name: "car-register", component: CarRegister },
 ];
+
