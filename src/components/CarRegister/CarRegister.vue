@@ -25,21 +25,64 @@
               </p>
             </div>
             <div class="register-form__group">
-              <b-form-group
-                class="select-city__form"
-                id="input-group-1"
-                label=""
-                label-for="input-1"
-              >
-                <b-form-select
-                  id="input-1"
-                  v-model="form.citys"
-                  :options="citys"
-                  required
-                ></b-form-select>
-              </b-form-group>
+              <b-form-select
+                class="register-form__input"
+                v-model="selected"
+                :options="options"
+              ></b-form-select>
             </div>
-           
+            <div class="register-form__group">
+              <b-row>
+                <b-col col="8">
+                  <input
+                    class="register-form__input"
+                    type="text"
+                    placeholder="Họ và Tên*"
+                  />
+                </b-col>
+                <b-col col="4">
+                  <input
+                    class="register-form__input"
+                    type="text"
+                    placeholder="số di động*"
+                  />
+                </b-col>
+              </b-row>
+            </div>
+            <div class="register-form__group">
+              <input
+                class="register-form__input"
+                type="text"
+                placeholder="Địa chỉ email(nếu có)"
+              />
+            </div>
+            <div class="register-form__group">
+              <input
+                class="register-form__input"
+                type="text"
+                placeholder="Xe đăng ký cho thuê"
+              />
+            </div>
+            <div class="register-form__group">
+              <p>Dịch vụ cho thuê</p>
+              <b-form-checkbox class="register-form__checkbox">
+                Tự lái
+              </b-form-checkbox>
+              <b-form-checkbox class="register-form__checkbox">
+                Có tài xế
+              </b-form-checkbox>
+              <b-form-checkbox class="register-form__checkbox">
+                Cả 2
+              </b-form-checkbox>
+            </div>
+            <div class="register-form__group">
+              <b-form-select
+                class="register-form__input"
+                v-model="selected"
+                :options="options"
+                value-fi=""
+              ></b-form-select>
+            </div>
           </div>
         </b-col>
       </b-row>
@@ -50,62 +93,61 @@
 
 <script>
 export default {
-    data(){
-        return{
-            form: {
-                citys: null,
-                checked: []
-            },
-            citys: [{text:'Thành phố đăng ký hoạt động với HaNoi-Car', value: null}, 'Thái Bình','Nam Định','Hà Nội', 'Thành phố Hồ Chí Minh'],
-            show: true
-        }
-    },
-
+  data() {
+    return {
+      selected: null,
+      options: [
+        { value: null, text: "Thành phố đăng ký hoạt động với HaNoi-Car" },
+        { value: "hanoi", text: "Hà Nội" },
+        { value: "danang", text: "Đà Nẵng" },
+        { value: "tphcm", text: "T.P Hồ Chí Minh" },
+      ],
+    };
+  },
 };
 </script>
 
 <style lang="scss" scoped>
 .carregister-main {
-  
-  background-image: url("../../assets/hotay2.jpg");
+  color: #ffffff;
+
+  background-image: url("https://www.mioto.vn/static/media/bg-owner-register.445d0fdb.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  min-height: 1000px ;
+  min-height: 1000px;
   position: relative;
-}   
-.carregister-content{
-    h1{
-        font-family: inherit;
-        font-size: 2.35rem;
-        font-weight: 750;
-        color: #ffffff;
-        vertical-align: baseline;
-        margin: 10px 10px;
-    }
-    p{
-        margin: 10px 10px;
-        font-family: inherit;
-        font-size: 1.25rem;
-        
-        color: #ffffff;
-        vertical-align: baseline;
+}
+.carregister-content {
+  h1 {
+    font-family: inherit;
+    font-size: 2.35rem;
+    font-weight: 750;
+    color: white;
+    vertical-align: baseline;
+    margin: 20px 30px;
+  }
+  p {
+    margin: 20px 30px;
+    font-family: inherit;
+    font-size: 1.25rem;
 
-    }
+    color: #ffffff;
+    vertical-align: baseline;
+  }
 }
 
-.carregister-body__form{
-  
+.carregister-body__form {
+  display: flex;
+  justify-content: center;
+  //background-color: #ffffff;
+  .carregister-form {
+    color: black;
+    margin: 30px 30px;
+    width: 70%;
+    background-color: #ffffff;
     display: flex;
-    justify-content: center;
-    //background-color: #ffffff;
-    .carregister-form{
-        margin: 30px 30px;
-        width: 70%;
-        background-color: #ffffff;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-    }
-
+    flex-direction: column;
+    justify-content: flex-start;
+  }
 }
 </style>

@@ -7,8 +7,11 @@
 </template>
 
 <script>
- import Footer from "./components/Footer.vue";
+import Footer from "./components/Footer.vue";
 import Header from "./components/Header.vue";
+// import { response } from 'express';
+// import { inject } from 'vue'
+
 
 export default {
   name: "App",
@@ -16,6 +19,7 @@ export default {
     Header,
     Footer,
   },
+  
 };
 </script>
 
